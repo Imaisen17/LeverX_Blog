@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Posts {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
 
     private String title;
     private String anons;
@@ -19,7 +19,7 @@ public class Posts {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -53,5 +53,14 @@ public class Posts {
 
     public void setViews(int views) {
         this.views = views;
+    }
+
+    public Posts() {
+    }
+
+    public Posts(String title, String anons, String full_text) {
+        this.title = title;
+        this.anons = anons;
+        this.full_text = full_text;
     }
 }
